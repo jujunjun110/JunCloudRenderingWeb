@@ -28,10 +28,19 @@
       font-size: 1.25em;
       color: white;
     }
+    #logger {
+      position: absolute;
+      left: 0;
+
+      width: 200px;
+      height: 200px;
+      background-color: #fff;
+      color: rgba(0, 0, 0);
+    }
   </style>
 
   <body style="margin: 0px; overflow: hidden">
-    <!-- minimal loader shown until image descriptors are loaded -->
+    <div id="logger"></div>
     <div class="arjs-loader">
       <div>Loading, please wait...</div>
     </div>
