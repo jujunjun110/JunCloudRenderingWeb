@@ -7,8 +7,17 @@ const camera = scene.camera;
 const area = document.getElementById("logger")!;
 
 setInterval(() => {
-  console.log(camera.position);
-  const pos = camera.position;
-  const txt = `x: ${pos.x}`;
-  area.innerText = txt;
+  try {
+    console.log(camera.position);
+    const pos = camera.position;
+    const txt = `
+        ${area}\n
+        ${camera}\n
+        x: ${pos.x}
+    `;
+    area.innerText = txt;
+  } catch (e) {
+    const _e = e as Error;
+    area.innerText = _e.message;
+  }
 }, 1000);
