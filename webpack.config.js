@@ -19,7 +19,9 @@ module.exports = {
         ]
     },
     devServer: {
-        contentBase: `${__dirname}/dist`,
+        static: {
+            directory: `${__dirname}/dist`
+        },
         port: 8080,
         open: true
     }
